@@ -1,0 +1,44 @@
+{
+    "version": "1.2.2",
+    "description": "A C library for reading and writing files containing sampled audio data",
+    "homepage": "https://libsndfile.github.io/libsndfile/",
+    "license": "LGPL-2.1-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip",
+            "hash": "md5:3783e513d735d1526f19a32a63991026"
+        },
+        "32bit": {
+            "url": "https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win32.zip",
+            "hash": "md5:443A2A2890969778E8F9FE6A146C0595"
+        }
+    },
+    "bin": [
+        "bin\\sndfile-cmp.exe",
+        "bin\\sndfile-concat.exe",
+        "bin\\sndfile-convert.exe",
+        "bin\\sndfile-deinterleave.exe",
+        "bin\\sndfile-info.exe",
+        "bin\\sndfile-interleave.exe",
+        "bin\\sndfile-metadata-get.exe",
+        "bin\\sndfile-metadata-set.exe",
+        "bin\\sndfile-play.exe",
+        "bin\\sndfile-salvage.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/libsndfile/libsndfile"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/libsndfile/libsndfile/releases/download/$version/libsndfile-$version-win64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/libsndfile/libsndfile/releases/download/$version/libsndfile-$version-win32.zip"
+            }
+        }
+    }
+}
+
+
+

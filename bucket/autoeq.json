@@ -1,0 +1,28 @@
+{
+    "version": "4.1.0",
+    "description": "Automatic headphone equalization from frequency responses",
+    "homepage": "https://autoeq.app/",
+    "license": "MIT",
+    "depends": "python",
+    "url": "https://github.com/jaakkopasanen/AutoEq/archive/refs/tags/4.1.0.zip",
+    "extract_dir": "AutoEq-4.1.0",
+    "installer": {
+        "script": [
+            "pushd \"$dir\"",
+            "python -m venv venv",
+            "venv\\Scripts\\activate.bat",
+            "python -m pip install -U pip",
+            "python -m pip install -U -e .",
+            "popd"
+        ]
+    },
+    "bin": "venv\\Scripts\\autoeq.exe",
+    "env_add_path": "venv\\Scripts",
+    "checkver": {
+        "github": "https://github.com/jaakkopasanen/AutoEq"
+    },
+    "autoupdate": {
+        "url": "https://github.com/jaakkopasanen/AutoEq/archive/refs/tags/$version.zip",
+        "extract_dir": "AutoEq-$version"
+    }
+}
